@@ -1,0 +1,612 @@
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.11.2 (last updated 15.11.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu, summary {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+  display: none;
+}
+
+a, p {
+  font-size: 16px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3e3e3e;
+  line-height: 200%;
+}
+
+h2, h3 {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+html {
+  background-color: #efefef;
+}
+
+.l-header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.l-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.l-background__business, .l-background__news, .l-background__company {
+  position: relative;
+}
+
+.l-background__business-top, .l-background__business-middle, .l-background__business-under, .l-background__news-top, .l-background__news-middle, .l-background__news-detail, .l-background__news-detail-btm, .l-background__company-top, .l-background__news-top, .l-background__company-top, .l-background__company-middle, .l-background__company-bottom {
+  position: absolute;
+  z-index: -5;
+}
+
+.l-background__business-top {
+  top: 15px;
+  right: 8%;
+}
+
+.l-background__business-middle {
+  top: 254px;
+  left: 8%;
+}
+
+.l-background__business-under {
+  bottom: 40px;
+  right: 25%;
+}
+
+.l-background__news-top {
+  top: 15px;
+  left: 20%;
+}
+
+.l-background__news-middle {
+  top: 125px;
+  right: 8%;
+}
+
+.l-background__news-detail {
+  top: 15px;
+  left: -20%;
+}
+
+.l-background__news-detail-btm {
+  bottom: -100px;
+  right: -20%;
+}
+
+.l-background__company-top {
+  top: 100px;
+  left: -20%;
+}
+
+.l-background__company-middle {
+  top: 25%;
+  right: -30%;
+}
+
+.l-background__company-bottom {
+  bottom: 10%;
+  left: -10%;
+}
+
+.l-footer {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.c-label__business_title {
+  position: relative;
+  height: 90px;
+  width: 400px;
+  text-align: center;
+  line-height: 90px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #EFEFEF;
+  letter-spacing: 8px;
+}
+
+.c-label__business_title::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 400px;
+  background-color: #3e3e3e;
+  transform: skewX(-10deg);
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.c-label__news {
+  position: relative;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.c-label__news::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 200px;
+  background-color: #1CB3F4;
+  transform: skewX(-10deg);
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.c-logo {
+  width: 380px;
+  height: 65px;
+}
+
+.c-logo__footer {
+  width: 174px;
+  height: 30px;
+}
+
+.c-button__header, .c-button__footer {
+  display: block;
+  position: relative;
+  height: 60px;
+  width: 200px;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.c-button__header::after, .c-button__footer::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 200px;
+  background-color: #E6B422;
+  transform: skewX(-20deg);
+  z-index: -1;
+  box-shadow: 5px 5px black;
+  border-radius: 10px;
+}
+
+.c-button__footer {
+  z-index: 1;
+}
+
+.c-button__regular {
+  display: block;
+  position: relative;
+  height: 50px;
+  width: 250px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.c-button__regular::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 250px;
+  background-color: #E6B422;
+  transform: skewX(-20deg);
+  z-index: -1;
+  box-shadow: 5px 5px black;
+  border-radius: 10px;
+}
+
+.c-img__business_photo {
+  height: 300px;
+  width: 545px;
+}
+
+.c-img__business_back-top {
+  width: 530px;
+  height: 530px;
+}
+
+.c-img__business_back-bottom {
+  width: 400px;
+  height: 400px;
+}
+
+.c-img__news_back-top {
+  width: 430px;
+  height: 430px;
+}
+
+.c-img__news_back-middle, .c-img__company-top, .c-img__company-bottom {
+  width: 500px;
+  height: 500px;
+}
+
+.c-img__news_detail-top, .c-img__company-middle {
+  width: 700px;
+  height: 700px;
+}
+
+.c-font__yellow, .c-font__subtitle {
+  color: #E6B422;
+}
+
+.c-font__subtitle {
+  font-family: "Nunito Sans", sans-serif;
+  color: #E6B422;
+  font-size: 48px;
+  font-weight: bold;
+  height: 65px;
+}
+
+.c-font__subtitle-jp {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.c-font__date {
+  font-size: 24px;
+}
+
+.c-font__footer {
+  font-weight: bold;
+}
+
+.c-font__business-long, .c-font__business-short {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 0.5em;
+  position: relative;
+}
+
+.c-font__business-long {
+  margin-top: 80px;
+}
+
+.c-font__business-short {
+  margin-top: 40px;
+}
+
+.c-font__business-long::after, .c-font__business-short::after {
+  position: absolute;
+  top: 45px;
+  left: -34px;
+  display: inline-block;
+  content: "";
+  border-radius: 5px;
+  background-color: #E6B422;
+  transform: skewX(-20deg);
+  z-index: -1;
+}
+
+.c-font__business-long::after {
+  height: 30px;
+  width: 698px;
+}
+
+.c-font__business-short::after {
+  height: 30px;
+  width: 366px;
+}
+
+.p-header {
+  display: flex;
+  justify-content: space-between;
+  width: 920px;
+}
+
+.p-header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 344px;
+}
+
+.p-business {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p-business__contents {
+  margin-top: 80px;
+  position: relative;
+}
+
+.p-business__title {
+  width: 1145px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-business__frame {
+  position: absolute;
+  top: 50px;
+  left: 152px;
+  height: 250px;
+  width: 940px;
+  border: solid 5px #e6b422;
+  border-radius: 10px;
+  transform: skewX(-10deg);
+  z-index: -2;
+}
+
+.p-business__text {
+  position: absolute;
+  left: 585px;
+  top: 120px;
+  width: 440px;
+}
+
+.p-news {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 200px;
+}
+
+.p-news__title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 140px;
+}
+
+.p-news__contents {
+  margin-top: 40px;
+  width: 920px;
+  display: grid;
+  grid-template-columns: 180px 280px 430px;
+  align-items: center;
+}
+
+.p-news__article {
+  width: 920px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p-news__article-date {
+  width: 920px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-news__article-title {
+  font-size: 32px;
+  margin-top: 80px;
+}
+
+.p-footer__top, .p-footer__bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-footer__top {
+  height: 100px;
+  background-color: #e3e3e3;
+}
+
+.p-footer__bottom {
+  height: 80px;
+  background-color: #D2D2D2;
+}
+
+.p-footer__top-content, .p-footer__bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-footer__top-content {
+  width: 340px;
+}
+
+.p-footer__bottom-content {
+  width: 920px;
+}
+
+.p-firstview {
+  display: flex;
+  width: 1360px;
+  justify-content: space-between;
+}
+
+.p-company {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.p-company__title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px 0 100px 0;
+}
+
+.p-company__contents {
+  display: grid;
+  grid-template-columns: 1fr; /* 1列のレイアウト */
+  grid-template-rows: repeat(5, auto); /* 5行のレイアウト、各行の高さはコンテンツに応じて自動調整 */
+  row-gap: 80px; /* 行間のギャップを80pxに設定 */
+}
+
+.p-company__content {
+  width: 920px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-company__content > p {
+  width: 520px;
+  font-size: 24px;
+}
+
+.p-company__subtitle {
+  position: relative;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p-company__subtitle::after {
+  position: absolute;
+  content: "";
+  width: 280px;
+  height: 5px;
+  background-color: #E6B422;
+  top: 38px;
+}
+
+.p-company__business {
+  width: 520px;
+}
+
+.p-company__business > p {
+  font-size: 24px;
+}
+
+.p-contact__contents {
+  width: 920px;
+}
+
+.u-margin__pc80 {
+  margin-top: 80px;
+}
+
+.u-margin__pc150 {
+  margin: 150px 0 150px 0;
+}
+/*# sourceMappingURL=kankoujinzai-style.css.map */
