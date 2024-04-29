@@ -33,7 +33,7 @@
             <div class="p-news__contents">
                 <p class="c-font__date">2024.4.30</p>
                 <p class="c-label__news">ニュースリリース</p>
-                <a href="/content/news.html">ホームページを公開しました</a>
+                <a href="<?php echo home_url(); ?>/news1/">ホームページを公開しました</a>
             </div>
         </section>
     </main>

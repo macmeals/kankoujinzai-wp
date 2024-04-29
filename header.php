@@ -14,14 +14,14 @@
 <body <?php body_class(); ?>>
     <header class="l-header">
         <div class="p-header">
-            <a href="/content/index.html"><img class="c-logo" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/logo_kankoujinzai.webp" alt="観光人材株式会社のロゴ"></a>
+            <a href="<?php echo home_url(); ?>"><img class="c-logo" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/logo_kankoujinzai.webp" alt="観光人材株式会社のロゴ"></a>
             <nav>
                 <ul class="p-header__content">
                     <li>
-                        <a href="#about">企業情報</a>
+                        <a href="<?php echo home_url(); ?>/company/">企業情報</a>
                     </li>
                     <li >
-                        <a href="/content/contact.html" class="c-button__header">お問い合わせ</a>
+                        <a href="<?php echo home_url(); ?>/contact/" class="c-button__header">お問い合わせ</a>
                     </li>
                 </ul>
             </nav>
