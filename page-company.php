@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: company
+*/
+?>
+
 <?php get_header(); ?>
 <main class="l-main">
         <div class="p-firstview">
