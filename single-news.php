@@ -47,7 +47,7 @@
                 <h2 class="p-news__article-title">ホームページを公開しました。</h2>
                 <p class="u-margin__pc80">観光人材株式会社のホームページをリニューアルしました。これから事業やお知らせについて情報をこのページ上に公開していきます。</p>
             </section>
-            <a class="c-button__regular u-margin__pc150" href="/content/index.html">ホームへ</a>
+            <a class="c-button__regular u-margin__pc150" href="<?php echo home_url(); ?>">ホームへ</a>
         </article>
     </main>
 

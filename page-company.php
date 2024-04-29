@@ -41,8 +41,7 @@ Template Name: company
                 <p class="c-font__subtitle-jp" >会社情報</p>
             </h2>
             <?php
-                        // 特定のページIDを指定
-            $page_id = 26; // ここに表示したいページのIDを設定
+            $page_id = 26; // 固定ページのCompanyの投稿ID
             $post = get_post($page_id); 
             setup_postdata($post);
 
@@ -52,12 +51,9 @@ Template Name: company
             ?>
             
             </div>
-            <a class="c-button__regular u-margin__pc150" href="/content/index.html">ホームへ</a>
+            <a class="c-button__regular u-margin__pc150" href="<?php echo home_url(); ?>">ホームへ</a>
         </section>
     </main>
-
-
-
 <?php get_footer(); ?>
 <?php wp_footer(); ?>
 
