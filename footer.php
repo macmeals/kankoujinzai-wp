@@ -2,7 +2,7 @@
         <section class="p-footer__top">
             <ul class="p-footer__top-content">
                 <li>
-                    <a href="/content/company.html">企業情報</a>
+                    <a href="<?php echo home_url('/company/'); ?>">企業情報</a>
                 </li>
                 <li >
                     <a href="/content/contact.html" class="c-button__footer">お問い合わせ</a>
