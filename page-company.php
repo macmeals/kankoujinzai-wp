@@ -50,7 +50,7 @@ Template Name: company
             wp_reset_postdata(); // グローバルな$post変数を元に戻す
             ?>
             
-            </div>
+            
             <a class="c-button__regular u-margin__pc150" href="<?php echo home_url(); ?>">ホームへ</a>
         </section>
     </main>

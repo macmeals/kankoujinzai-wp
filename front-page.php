@@ -20,7 +20,7 @@
                 <div class="p-business__frame"></div>
                 <p class="p-business__text">大阪堺・その他地域の宿泊施設を複数所有しています。また各種ホテルと提携しており、そのアテンドも行っています。</p>
             </div>
-            <p class="c-font__business-long">千客万来のインバウンド</p>
+            <p class="c-font__business-long u-margin__pc-top80-btm40 u-margin__sp-top40-btm20">千客万来のインバウンド</p>
             <p class="c-font__business-short">おもてなし。</p>
         </section>
         <section class="l-background__news p-news">
@@ -32,14 +32,14 @@
             </h2>
             <div class="p-news__contents">
                 <p class="c-font__date">2024.4.30</p>
-                <p class="c-label__news">ニュースリリース</p>
-                <a href="<?php echo home_url(); ?>/news1/">ホームページを公開しました</a>
+                <p class="c-label__news-blue">ニュースリリース</p>
+                <a class="p-news__grid-item" href="<?php echo home_url(); ?>/news1/">ホームページを公開しました</a>
             </div>
         </section>
     </main>
-
-<?php get_footer(); ?>
-<?php wp_footer(); ?>
+    <?php get_sidebar(); ?>
+    <?php get_footer(); ?>
+    <?php wp_footer(); ?>
 
 </body>
 </html>
