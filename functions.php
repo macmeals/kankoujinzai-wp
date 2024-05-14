@@ -38,3 +38,28 @@ function create_news_genre_taxonomy() {
     );
 }
 add_action( 'init', 'create_news_genre_taxonomy' );
+
+// front-page.phpのNewsセクションに呼び出す関数
+// single-news.phpのNewsページに呼び出す関数
+
+//blue、Orangeラベルをスラッグ毎に呼び出す関数
+function get_news_label_class($post_id) {
+    $terms = get_the_terms($post_id, 'news-genre');
+    if ($terms && !is_wp_error($terms)) {
+        foreach ($terms as $term) {
+            if ($term->slug == 'news-release') {
+                return 'c-label__news-orange';
+            } elseif ($term->slug == 'topic') {
+                return 'c-label__news-blue';
+            }
+        }
+    }
+    // デフォルトのクラス名
+    return '';
+}
+
+//カスタム投稿「News」の記事リンクを出力する関数
+function custom_news_link($post_id) {
+    $link = '<a class="p-news__grid-item" href="' . get_permalink($post_id) . '">' . get_the_title($post_id) . '</a>';
+    echo $link;
+}

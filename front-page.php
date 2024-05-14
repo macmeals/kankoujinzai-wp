@@ -30,10 +30,35 @@
                 <p class="c-font__subtitle">News</p>
                 <p class="c-font__subtitle-jp" >お知らせ</p>
             </h2>
-            <div class="p-news__contents">
-                <p class="c-font__date">2024.4.30</p>
-                <p class="c-label__news-blue">ニュースリリース</p>
-                <a class="p-news__grid-item" href="<?php echo home_url(); ?>/news1/">ホームページを公開しました</a>
+            
+            <?php
+
+                // カスタム投稿「News」のクエリを取得する
+                $args = array(
+                    'post_type' => 'news',
+                    'posts_per_page' => -1, // 全ての投稿を取得する
+                );
+
+                $news_query = new WP_Query($args);
+
+                // カスタム投稿「News」のループ
+                if ($news_query->have_posts()) {
+                    while ($news_query->have_posts()) {
+                        $news_query->the_post();
+                        echo '<div class="p-news__contents">'; 
+                            echo '<p class="c-font__date">' . get_the_date('Y.m.d') . '</p>'; 
+                            echo '<p class="' . get_news_label_class(get_the_ID()) . '">'; 
+                            echo get_the_terms(get_the_ID(), 'news-genre')[0]->name; // カスタムタクソノミーの名前を取得して出力
+                            echo '</p>';
+                            // カスタム投稿「News」のリンクを出力
+                            custom_news_link(get_the_ID());
+                        echo ' </div>'; 
+                        
+                    }
+                    wp_reset_postdata(); // クエリをリセット
+                }
+                ?>
+
             </div>
         </section>
     </main>
