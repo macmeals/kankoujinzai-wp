@@ -963,7 +963,6 @@ html {
 
 @media (width < 440px) {
   .p-news__article {
-    height: 60vh;
     width: 300px;
   }
 }

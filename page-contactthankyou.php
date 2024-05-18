@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: company
+Template Name: contact_thankyou
 */
 ?>
 
 <?php get_header(); ?>
-<main class="l-main">
+    <main class="l-main">
         <div class="p-firstview">
             <picture>
                 <!-- pc -->
@@ -32,31 +32,23 @@ Template Name: company
                 <img src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/fv_news_shikaku-pc.png" alt="ファーストビューのあしらい">
             </picture>
         </div>
-        <section class="l-background__company p-company">
-            <img class="l-background__company-top  c-img__company-top " src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="1枚目のCompanyの写真">
-            <img class="l-background__company-middle  c-img__company-middle" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="2枚目のCompanyセクションの写真">
-            <img class="l-background__company-bottom  c-img__company-bottom" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="3枚目のCompanyセクションの写真">
+        <section class="l-background__contact p-company">
+            <img class="l-background__contact-top  c-img__contact-top " src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="1枚目のContactの写真">
+            <img class="l-background__contact-middle  c-img__contact-middle" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="2枚目のContactの写真">
+            <img class="l-background__contact-bottom  c-img__contact-bottom" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="3枚目のContactの写真">
+            
             <h2 class="p-company__title">
-                <p class="c-font__subtitle">Company</p>
-                <p class="c-font__subtitle-jp" >会社情報</p>
+                <p class="c-font__subtitle">Contact</p>
+                <p class="c-font__subtitle-jp" >お問い合わせ</p>
             </h2>
-            <?php
-            $page_id = 26; // 固定ページのCompanyの投稿ID
-            $post = get_post($page_id); 
-            setup_postdata($post);
 
-            the_content();
-
-            wp_reset_postdata(); // グローバルな$post変数を元に戻す
-            ?>
-            
-            
+            <?php the_content(); ?>
             <a class="c-button__regular u-margin__pc-top-btm150 u-margin__sp-top50" href="<?php echo home_url(); ?>">ホームへ</a>
         </section>
     </main>
     <?php get_sidebar(); ?>
-    <?php get_footer(); ?>
-    <?php wp_footer(); ?>
+<?php get_footer(); ?>
+<?php wp_footer(); ?>
 
 </body>
 </html>
