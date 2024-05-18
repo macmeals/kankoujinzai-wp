@@ -35,4 +35,4 @@
         </div>
         <?php wp_head();?>
     </header>
-    <div class="l-wrapper"> <!-- 閉じタグはFooterで記載 --> 
+<div class="l-wrapper"> <!-- 閉じタグはFooterで記載 --> 

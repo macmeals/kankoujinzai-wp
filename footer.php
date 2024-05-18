@@ -1,4 +1,4 @@
-</div> <!-- class="l-wrapper"の閉じタグ --> 
+</div> 
     <footer class="l-footer">
         <section class="p-footer__top">
             <ul class="p-footer__top-content">
