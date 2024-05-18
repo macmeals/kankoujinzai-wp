@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="l-main">
+    <main class="l-main">
         <div class="p-firstview">
             <picture>
                 <!-- pc -->
@@ -30,29 +30,37 @@
             <img  class="c-img__news_detail-top l-background__news-detail"  src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="背景">
             <img  class="c-img__news_back-middle l-background__news-detail-btm"  src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="背景">
             <div class="p-news__article-date">
-                <p class="c-font__date"><?php echo get_the_date(); ?></p>
-                <p class="c-label__news"> 
-                <?php 
-                    $terms = get_the_terms( get_the_ID(), 'news-genre' );
-                    if ( !empty($terms) ) {
-                        // タクソノミー名を表示
-                        echo esc_html( $terms[0]->name );
-                    } else {
-                        echo 'ニュース'; // タクソノミーが見つからない場合のフォールバック
-                    }
-                    ?>
-                </p>
+                <p class="c-font__date"><?php echo get_the_date('Y.m.d'); ?></p>
+                <?php
+                    echo '<p class="' . get_news_label_class(get_the_ID()) . '">'; 
+                    echo get_the_terms(get_the_ID(), 'news-genre')[0]->name; // カスタムタクソノミーの名前を取得して出力
+                    echo '</p>';
+                ?>
             </div>
             <section>
-                <h2 class="p-news__article-title">ホームページを公開しました。</h2>
-                <p class="u-margin__pc80">観光人材株式会社のホームページをリニューアルしました。これから事業やお知らせについて情報をこのページ上に公開していきます。</p>
+                <!-- 投稿のタイトルを取得 -->
+                <?php
+                    global $post;
+                    $title = get_the_title($post->ID);
+                    echo '<h2 class="p-news__article-title">' . esc_html($title) . '</h2>';
+                ?>
+
+                    <!--  投稿コンテンツを取得・表示 -->
+                <?php
+                    $post = get_post($post->ID); 
+                    setup_postdata($post);
+                    $content = apply_filters('the_content', $post->post_content);
+                    echo '<p class="u-margin__pc-top80 u-margin__sp-top60">' . $content . '</p>';
+                    wp_reset_postdata();
+                ?>
+
             </section>
-            <a class="c-button__regular u-margin__pc150" href="<?php echo home_url(); ?>">ホームへ</a>
+            <a class="c-button__regular u-margin__pc-top-btm150 u-margin__sp-top40-btm40" href="<?php echo home_url(); ?>">ホームへ</a>
         </article>
     </main>
-
-<?php get_footer(); ?>
-<?php wp_footer(); ?>
+    <?php get_sidebar(); ?>
+    <?php get_footer(); ?>
+    <?php wp_footer(); ?>
 
 </body>
 </html>

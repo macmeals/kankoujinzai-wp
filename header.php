@@ -14,8 +14,10 @@
 <body <?php body_class(); ?>>
     <header class="l-header">
         <div class="p-header">
-            <a href="<?php echo home_url(); ?>"><img class="c-logo" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/logo_kankoujinzai.webp" alt="観光人材株式会社のロゴ"></a>
-            <nav>
+            <a class="p-header__logo" href="<?php echo home_url(); ?>">
+                <img class="c-logo" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/logo_kankoujinzai.webp" alt="観光人材株式会社のロゴ">
+            </a>
+            <nav class="p-header__mobile">
                 <ul class="p-header__content">
                     <li>
                         <a href="<?php echo home_url(); ?>/company/">企業情報</a>
@@ -25,6 +27,12 @@
                     </li>
                 </ul>
             </nav>
+            <button class="c-button__hamberger">
+                    <span class="c-button__hamberger__upperbar"></span>
+                    <span class="c-button__hamberger__middlebar"></span>
+                    <span class="c-button__hamberger__underbar"></span>
+            </button>
         </div>
         <?php wp_head();?>
     </header>
+    <div class="l-wrapper"> <!-- 閉じタグはFooterで記載 --> 
