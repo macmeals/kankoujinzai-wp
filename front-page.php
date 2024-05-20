@@ -10,7 +10,7 @@
                             <p class="c-label__business_title">心<span class="c-font__yellow">斎</span>橋観光</p>
                         </div>
                         <div class="p-business__frame"></div>
-                        <p class="p-business__text">心斎橋は大阪随一の繁華街で、グルメもショッピングも楽しめます。そのアテンドについて、お任せください。またバスでの各所の送迎も行っております。お店の詳細は以下のサイトをご参照下さい。We Love 心斎橋のサイトは<a href="#" class="c-font__yellow">こちら</a></p>
+                        <p class="p-business__text">心斎橋は大阪随一の繁華街で、グルメもショッピングも楽しめます。そのアテンドについて、お任せください。またバスでの各所の送迎も行っております。お店の詳細は以下のサイトをご参照下さい。We Love 心斎橋のサイトは<a href="https://weloveshinsaibashi.com/" class="c-font__yellow">こちら</a></p>
                     </div>
                     <div class="p-business__contents">
                         <div class="p-business__title">
@@ -18,7 +18,7 @@
                             <p class="c-label__business_title">ホ<span class="c-font__yellow">テ</span>ル観光</p>
                         </div>
                         <div class="p-business__frame"></div>
-                        <p class="p-business__text">大阪堺・その他地域の宿泊施設を複数所有しています。また各種ホテルと提携しており、そのアテンドも行っています。</p>
+                        <p class="p-business__text">大阪堺・その他地域の宿泊施設を複数所有しています。また各種ホテルと提携しており、そのアテンドも行っています。現在準備中のホテルは<a href="https://youtu.be/7OAQj8rM6hY" class="c-font__yellow">こちら</a></p>
                     </div>
                     <p class="c-font__business-long u-margin__pc-top80-btm40 u-margin__sp-top40-btm20">千客万来のインバウンド</p>
                     <p class="c-font__business-short">おもてなし。</p>
