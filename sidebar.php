@@ -3,10 +3,7 @@
     <img class="l-background__aside-middle c-img__aside_back" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt=2つ目の背景">
     <ul class="p-aside u-margin__sp-top180">
         <li>
-            <a href="/content/company.html">企業情報</a>
-        </li>
-        <li>
-            <a class="c-button__footer u-margin__sp-top80" href="/content/contact.html" >お問い合わせ</a>
+            <a href="<?php echo home_url(); ?>/company/">企業情報</a>
         </li>
         <li>
             <img class="c-logo__footer u-margin__sp-top100" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/logo_kankoujinzai.webp" alt="フッターのロゴ">

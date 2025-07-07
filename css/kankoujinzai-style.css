@@ -109,7 +109,7 @@ meter {
 }
 
 /* PCはWidthが441pxより大きい */
-a, p {
+a, p, nav {
   font-size: 16px;
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 400;
@@ -692,6 +692,11 @@ html {
     height: 150px;
   }
 }
+.c-img__sns {
+  width: 200px;
+  height: 200px;
+}
+
 .c-font__yellow, .c-font__subtitle {
   color: #E6B422;
 }
@@ -839,6 +844,12 @@ html {
   display: none;
 }
 
+.p-header__mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media (width < 440px) {
   .p-header__mobile {
     display: none;
@@ -913,7 +924,6 @@ html {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 200px;
 }
 
 .p-news__title {
@@ -1185,6 +1195,60 @@ html {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.p-newContact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 80px 0 80px 0;
+}
+
+.p-newContact__title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p-newContact__content {
+  margin-top: 40px;
+}
+
+@media (width < 440px) {
+  .p-newContact__content {
+    width: 300px;
+  }
+}
+.p-newContact__contents {
+  display: flex;
+  justify-content: space-between;
+  width: 680px;
+}
+
+@media (width < 440px) {
+  .p-newContact__contents {
+    width: 300px;
+    flex-direction: column;
+  }
+}
+.p-newContact__snsTitle {
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (width < 440px) {
+  .p-newContact__sp {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.u-margin__top5 {
+  margin-top: 5px;
+}
+
+.u-margin__top40 {
+  margin-top: 40px;
 }
 
 .u-margin__left20 {
