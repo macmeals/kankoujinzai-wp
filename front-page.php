@@ -10,20 +10,40 @@
                             <p class="c-label__business_title">ホ<span class="c-font__yellow">テ</span>ル龍吉</p>
                         </div>
                         <div class="p-business__frame"></div>
-                            <p class="p-business__text">関西国際空港(KIX)へのアクセスも抜群。寛ぎ空間で、特別なひとときを。
+                            <p class="p-business__text">関西国際空港(KIX)へ30分でアクセス抜群。寛ぎ空間で、特別なひとときを。
                                 </br>【料金】1泊2食:5,000円～／お一人様
-                                </br>※本館・別館があり、本館・足湯設備を準備中です。
+                                </br>※本館(準備中)・別館があります。大浴場・足湯設備も準備中です。
+                            </p>
+                    </div>
+                    <div class="p-business__contents">
+                        <div class="p-business__title">
+                            <img class="c-img__business_photo" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/09/fv5.webp" alt="ホテル龍吉">
+                            <p class="c-label__business_title">観<span class="c-font__yellow">光</span>ツアー</p>
+                        </div>
+                        <div class="p-business__frame"></div>
+                            <p class="p-business__text">宿泊団体様に向けて、無料の和歌山観光ツアーを毎日開催しております。
+                                </br>黒潮市場、和歌山城、貴志駅(ねこ駅長)、紀三井寺
+                                </br>など、和歌山の魅力的な観光地を日帰りでご案内します。
                             </p>
                     </div>
                     <div class="p-business__contents">
                         <div class="p-business__title">
                             <img class="c-img__business_photo" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/07/fv3.webp" alt="御食事">
-                            <p class="c-label__business_title">御<span class="c-font__yellow">食</span>事</p>
+                            <p class="c-label__business_title">団体御<span class="c-font__yellow">食</span>事</p>
                         </div>
                         <div class="p-business__frame"></div>
-                        <p class="p-business__text">ホテル龍吉や、大阪市内中心地で団体客様向けの食事をご用意しています。ゆったりとした広々空間で、日本の美味しい食事を堪能いただけます。
-                            </br>【料金】1食:680円～／お一人様
-                            </br>※ご予算に合わせて提案させていただきます</p>
+                        <p class="p-business__text">心斎橋で団体客様向けの食事をご用意しています。鍋定食・焼肉定食を堪能頂けます。
+                            ※ご予算に合わせて提案させていただきます。
+                            </br>【住所】大阪市中央区東心斎橋1-14-14 階
+                    </div>
+                    <div class="p-business__contents">
+                        <div class="p-business__title">
+                            <img class="c-img__business_photo" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/07/fv1.webp" alt="無料送迎バス">
+                            <p class="c-label__business_title">無料<span class="c-font__yellow">送迎</span>バス</p>
+                        </div>
+                        <div class="p-business__frame"></div>
+                        <p class="p-business__text">ホテルや御食事をご利用いただいたお客様限定で、大阪市内↔関空(KIX)の無料送迎バスをご用意しています。(大型55人乗り、中型28人乗り、マイクロ18人乗り・22人乗り)
+                        </p>
                     </div>
                     <div class="p-business__contents">
                         <div class="p-business__title">
@@ -36,20 +56,10 @@
                             </br>  内容量：30ｇ 種類：美容液クリーム
                         </p>
                     </div>
-                    <div class="p-business__contents">
-                        <div class="p-business__title">
-                            <img class="c-img__business_photo" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/07/fv1.webp" alt="無料送迎バス">
-                            <p class="c-label__business_title">無料<span class="c-font__yellow">送迎</span>バス</p>
-                        </div>
-                        <div class="p-business__frame"></div>
-                        <p class="p-business__text">ホテルや御食事をご利用いただいたお客様限定で、大阪市内↔関空(KIX)の無料送迎バスをご用意しています。(大型55人乗り、中型28人乗り、マイクロ18人乗り・22人乗り)
-                        </p>
-                    </div>
                     <p class="c-font__business-long u-margin__pc-top80-btm40 u-margin__sp-top40-btm20">千客万来のインバウンド</p>
                     <p class="c-font__business-short">おもてなし。</p>
                 </section>
                 <section class="l-background__news p-news">
-                    <img class="l-background__news-top  c-img__news_back-top" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="1枚目のNewsセクションの写真">
                     <img class="l-background__news-middle  c-img__news_back-middle" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="2枚目のNewsセクションの写真">
                     <h2 class="p-news__title">
                         <p class="c-font__subtitle">News</p>
@@ -81,6 +91,25 @@
                             wp_reset_postdata(); // クエリをリセット
                         }
                         ?>
+                </section>
+                <section class="l-background__news p-newContact">
+                    <img class="l-background__news-top  c-img__news_back-top" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="1枚目のNewsセクションの写真">
+                    <img class="l-background__news-middle  c-img__news_back-middle" src="<?php echo esc_url(content_url('/uploads')); ?>/2024/04/background_tomoe.webp" alt="2枚目のNewsセクションの写真">
+                    <h2 class="p-newContact__title">
+                        <p class="c-font__subtitle">Contact</p>
+                        <p class="c-font__subtitle-jp" >お問い合わせ</p>
+                    </h2>
+                    <p class="p-newContact__content">お仕事のご相談等各種お問い合わせは以下のLINEもしくはWeChatからお問い合わせ下さい。</p>
+                    <div class="p-newContact__contents u-margin__top40">
+                        <div class="p-newContact__sp">
+                            <p class="p-newContact__snsTitle">LINE</p>
+                            <img class="c-img__sns u-margin__top5" src="<?php echo esc_url(content_url('/uploads')); ?>/2025/03/LINE.png" alt="LINE画像">
+                        </div>
+                        <div class="p-newContact__sp u-margin__sp-top40">
+                            <p class="p-newContact__snsTitle">WeChat</p>
+                            <img class="c-img__sns" src="<?php echo esc_url(content_url('/uploads')); ?>/2025/03/wechat.png" alt="WeChat画像">
+                        </div>
+                    </div>
                 </section>
             </main>
 

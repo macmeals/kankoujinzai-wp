@@ -1,14 +1,7 @@
 </div> 
     <footer class="l-footer">
         <section class="p-footer__top">
-            <ul class="p-footer__top-content">
-                <li>
-                    <a href="<?php echo home_url(); ?>/company/">企業情報</a>
-                </li>
-                <li >
-                    <a href="<?php echo home_url(); ?>/contact/" class="c-button__footer u-margin__sp-top30">お問い合わせ</a>
-                </li>
-            </ul>
+            <a href="<?php echo home_url(); ?>/company/">企業情報</a>
         </section>
         <section class="p-footer__bottom">
             <ul class="p-footer__bottom-content">
